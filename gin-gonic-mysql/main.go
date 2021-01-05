@@ -1,7 +1,5 @@
 package main
 
-// only need mysql OR sqlite
-// both are included here for reference
 import (
 	"fmt"
 
@@ -21,9 +19,7 @@ type Person struct {
 }
 
 func main() {
-	// NOTE: See we’re using = to assign the global var
-	// instead of := which would assign it only in this function
-	//db, err = gorm.Open(“sqlite3”, “./gorm.db”)
+
 	db, _ = gorm.Open("mysql", "root:Diwakar@123@tcp(127.0.0.1:3306)/gin")
 	if err != nil {
 		fmt.Println(err)
